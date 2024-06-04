@@ -1,0 +1,39 @@
+.header-container{
+    width: 1160px;
+    margin: auto;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container .title{
+    font-size: 16px;
+}
+
+.header-container .socials{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-container .socials a{
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.header-container .socials a::after{
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
