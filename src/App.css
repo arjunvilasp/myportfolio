@@ -9,9 +9,3 @@ html,body{
   color: #fff;
 }
 
-section{
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  align-items: center;
-}

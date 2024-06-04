@@ -25,15 +25,47 @@
     display: grid;
     place-items: center;
     position: relative;
+    z-index: 0;
+    transition: all .3s ease;
 }
 
-.header-container .socials a::after{
+.header-container .socials a::before{
     content: '';
-    height: 100%;
+    height: 0%;
     width: 100%;
     display: block;
     background-color: #fff;
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
+    border-radius: 3px;
+    transition: all .3s ease;
+}
+
+
+.header-container .socials a::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+    border-radius: 2px;
+    transition: all .3s ease;
+}
+
+.header-container .socials a:hover{
+    color: #000;
+}
+
+.header-container .socials a:hover::before{
+    height: 100%;
+}
+
+.header-container .socials a:hover::after{
+    width: 100%;
 }
