@@ -1,0 +1,35 @@
+.card-container{
+    height: 150px;
+    width: 120px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    margin: 10px;
+    border-radius: 5px;
+    animation: shake 5s; 
+    animation-iteration-count: infinite; 
+}
+
+.card-container > img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.card-container > p{
+    color: #000;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateY(-3px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateY(3px);
+    }
+}

@@ -64,11 +64,18 @@
 .hero-container .details .name{
     font-size: 4rem;
     letter-spacing: 5px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #5a5ac6, #f1e5f1); /* Define your gradient colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .hero-container .details .desc{
     font-size: 18px;
     text-align: right;
+    margin-right: 40px;
     color: #bbb;
 }
 
