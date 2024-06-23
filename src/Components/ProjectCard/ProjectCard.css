@@ -1,94 +1,120 @@
-.project{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 900px;
-    height: 400px;
-    margin: auto;
-    animation: fade-in linear;
-    animation-timeline:view();
-    animation-range: entry;
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: 900px;
+  height: 400px;
+  margin: auto;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: entry;
 }
 
-
-.project:nth-child(2n){
-    flex-direction: row-reverse;
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
 }
 
-
-.project .img img{
-    width: 350px;
-    min-height: 220px;
-    border-radius: 5px;
+.project .img img {
+  width: 350px;
+  min-height: 220px;
+  border-radius: 5px;
 }
 
-.project .details{
-    display: flex;
+.project .details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.project .details .stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project .details .stack ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project .details .stack ul li {
+  font-size: 12px;
+  list-style: none;
+  border: 0.5px solid #fff;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.project .details .code {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.project .details .code a {
+  text-decoration: none;
+}
+
+.project .details .code button {
+  height: 40px;
+  width: 100px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.5s ease;
+}
+
+.project .details .code button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
     flex-direction: column;
-    gap: 25px;
-}
-
-.project .details .stack{
-    display: flex;
+    width: 500px;
+    height: 100%;
+    gap: 20px;
+    margin:20px 10px;
+  }
+  .project:nth-child(2n) {
     flex-direction: column;
-    gap: 20px;
-}
-
-.project .details .stack ul{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.project .details .stack ul li{
-    font-size: 12px;
-   list-style: none;
-   border: .5px solid #fff;
-   border-radius: 15px;
-   padding: 5px 10px;
-
-}
-
-.project .details .code{
-   display: flex;
-   align-items: center;
-   gap: 50px;
-}
-
-.project .details .code a{
-    text-decoration: none;
-}
-
-.project .details .code button{
-    height: 40px;
-    width: 100px;
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
+  }
+  .project .details {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .project .details .project-desc{
+    width: 70%;
+    margin: auto;
+    text-align: justify;
+  }
+  .project .details .stack {
+    justify-content: space-around;
     gap: 10px;
-    transition: all .5s ease;
-}
-
-
-.project .details .code button:hover{
-    background-color: #fff;
-    color: #000;
-}
-
-
-@keyframes fade-in {
-    from{
-        opacity: 0;
-        scale: 0.5;
-    }
-    to{
-        opacity: 1;
-        scale: 1;
-    }
+  }
+  .project .details .stack .stack-title{
+    text-align: center;
+  }
 }

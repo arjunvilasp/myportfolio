@@ -33,3 +33,18 @@
         transform: translateY(3px);
     }
 }
+
+@media (max-width: 600px) {
+    .card-container{
+        height: 100%;
+        width: 80px;
+    }
+    .card-container > img{
+        height: 50px;
+        width: 50px;
+        object-fit: cover;
+    }
+    .card-container > p{
+        font-size: 12px;
+    }
+}

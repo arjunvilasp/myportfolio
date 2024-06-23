@@ -10,7 +10,7 @@ const ProjectCard = ({item}) => {
       <h2 className='project-title'>{item.title}</h2>
       <p className='project-desc'>{item.desc}</p>
       <div className='stack'>
-        <h3>Tech stack</h3>
+        <h3 className='stack-title'>Tech stack</h3>
         <ul>
           {
             item.stack.map((data,i)=>{
